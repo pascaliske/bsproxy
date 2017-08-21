@@ -1,13 +1,13 @@
 {
   "name": "@pascaliske/bsproxy",
-  "description": "",
+  "description": "Command line utility for quickly proxying of a given url.",
   "author": {
     "name": "Pascal Iske",
     "email": "info@pascal-iske.de",
     "url": "https://pascal-iske.de"
   },
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "url": "https://github.com/pascaliske/bsproxy.git",
     "type": "git"
