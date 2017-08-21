@@ -1,6 +1,6 @@
-# `pascaliske/bsproxy`
+# `@pascaliske/bsproxy`
 
-[![npm](https://img.shields.io/npm/v/bsproxy.svg?style=flat)]()
+[![npm](https://img.shields.io/npm/v/@pascaliske/bsproxy.svg?style=flat)]()
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/pascaliske/modern-cli/master/LICENSE.md)
 [![Travis](https://img.shields.io/travis/pascaliske/bsproxy.svg?style=flat)]()
 [![Greenkeeper badge](https://badges.greenkeeper.io/pascaliske/bsproxy.svg)](https://greenkeeper.io/)
@@ -9,7 +9,7 @@
 
 ## Install
 ```bash
-$ yarn global add bsproxy
+$ yarn global add @pascaliske/bsproxy
 ```
 
 ## CLI
