@@ -1,8 +1,8 @@
 # `@pascaliske/bsproxy`
 
-[![npm](https://img.shields.io/npm/v/@pascaliske/bsproxy.svg?style=flat)]()
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/pascaliske/modern-cli/master/LICENSE.md)
-[![Travis](https://img.shields.io/travis/pascaliske/bsproxy.svg?style=flat)]()
+[![npm](https://img.shields.io/npm/v/@pascaliske/bsproxy.svg?style=flat)](https://www.npmjs.com/package/@pascaliske/bsproxy)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/pascaliske/bsproxy/blob/master/LICENSE.md)
+[![Travis](https://img.shields.io/travis/pascaliske/bsproxy.svg?style=flat)](https://travis-ci.org/pascaliske/bsproxy)
 [![Greenkeeper badge](https://badges.greenkeeper.io/pascaliske/bsproxy.svg)](https://greenkeeper.io/)
 
 > Command line utility for quickly proxying a given url.
