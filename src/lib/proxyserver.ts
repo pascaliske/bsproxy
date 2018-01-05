@@ -5,21 +5,22 @@ export interface ProxyServerOptions extends bs.Options {
 }
 
 export class ProxyServer {
-    private options: ProxyServerOptions;
-    private browserSync: bs.BrowserSyncInstance;
+    private defaults: ProxyServerOptions = {
+        open: false,
+        ui: false,
+        logLevel: 'silent'
+    }
+
+    private options: ProxyServerOptions
+    private browserSync: bs.BrowserSyncInstance
 
     /**
      * Initializes the ProxyServer.
      *
      * @returns {ProxyServer}
      */
-    constructor() {
-        this.options = {
-            open: false,
-            ui: false,
-            logLevel: 'silent'
-        }
-
+    constructor(options: ProxyServerOptions) {
+        this.options = Object.assign({}, this.defaults)
         this.browserSync = bs.create()
     }
 

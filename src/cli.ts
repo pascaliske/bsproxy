@@ -30,5 +30,6 @@ const proxyUrl: string = `${parse(url, false, true).protocol}//localhost:${port}
 log(`proxy started: ${Logger.cyan(proxyUrl)} -> ${Logger.cyan(url)}`)
 
 // create proxy server
-const server = new ProxyServer()
+const options = {}
+const server = new ProxyServer(options)
 server.listen(url, port)
