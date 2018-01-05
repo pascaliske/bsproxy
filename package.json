@@ -26,7 +26,7 @@
     "prepublish": "yarn run build",
     "build": "rm -rf dist/ && tsc",
     "watch": "yarn run build --watch",
-    "docs": "rm -rf docs/ && typedoc --target es5 --mode file --module commonjs --excludePrivate --out docs/ src/*.ts",
+    "docs": "rm -rf docs/ && typedoc --target es5 --mode file --module commonjs --ignoreCompilerErrors --excludePrivate --out docs/ src/*.ts",
     "test": "ava tests/*.js"
   },
   "publishConfig": {
