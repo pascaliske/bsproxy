@@ -5,6 +5,7 @@ node_js:
 - '7'
 install:
 - yarn install
+- yarn run build
 script:
 - yarn run test
 deploy:

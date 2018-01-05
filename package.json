@@ -23,7 +23,6 @@
     "bsproxy": "dist/cli.js"
   },
   "scripts": {
-    "prepublish": "npm run build",
     "build": "rm -rf dist/ && tsc",
     "watch": "yarn run build --watch",
     "docs": "rm -rf docs/ && typedoc --target es5 --mode file --module commonjs --ignoreCompilerErrors --excludePrivate --out docs/ src/*.ts",
