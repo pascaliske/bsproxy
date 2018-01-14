@@ -45,8 +45,8 @@ export class ProxyServer {
      * @returns {void}
      */
     public listen(url: string, port: number = 9001): void {
-        if (!url) {
-            throw new Error('Please enter a url to proxy!')
+        if (!url || url.match(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/) === null) {
+            throw new Error('Please enter a valid url to proxy!')
         }
 
         // start server
