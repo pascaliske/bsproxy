@@ -2,7 +2,6 @@ import * as bs from 'browser-sync';
 export interface ProxyServerOptions extends bs.Options {
 }
 export declare class ProxyServer {
-    private defaults;
     private options;
     private browserSync;
     /**
@@ -10,7 +9,7 @@ export declare class ProxyServer {
      *
      * @returns {ProxyServer}
      */
-    constructor(options: ProxyServerOptions);
+    constructor(options?: ProxyServerOptions);
     /**
      * Starts listening on a given port.
      *

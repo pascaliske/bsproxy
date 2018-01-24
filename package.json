@@ -7,7 +7,7 @@
     "url": "https://pascal-iske.de"
   },
   "license": "MIT",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "repository": {
     "url": "https://github.com/pascaliske/bsproxy.git",
     "type": "git"
@@ -23,24 +23,29 @@
     "bsproxy": "dist/cli.js"
   },
   "scripts": {
-    "build": "rm -rf dist/ && tsc",
+    "build": "rm -rf dist/ typings/ && tsc",
     "watch": "yarn run build --watch",
     "docs": "rm -rf docs/ && typedoc --target es5 --mode file --module commonjs --ignoreCompilerErrors --excludePrivate --out docs/ src/*.ts",
-    "test": "ava tests/*.js"
+    "test": "ava tests/*.js",
+    "lint": "tslint --config tslint.json --fix src/**/*.ts",
+    "format": "prettier --config .prettierrc --write src/**/*.ts"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
-    "browser-sync": "^2.23.2",
+    "browser-sync": "^2.23.5",
     "modern-cli": "^2.0.7",
     "url": "^0.11.0"
   },
   "devDependencies": {
     "@types/browser-sync": "^0.0.38",
-    "@types/node": "^8.5.7",
+    "@types/node": "^9.3.0",
     "ava": "^0.24.0",
+    "prettier": "^1.10.2",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.6.0",
     "typedoc": "^0.9.0",
     "typescript": "^2.6.2"
   }
