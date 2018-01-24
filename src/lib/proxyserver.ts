@@ -1,8 +1,6 @@
-import * as bs from 'browser-sync';
+import * as bs from 'browser-sync'
 
-export interface ProxyServerOptions extends bs.Options {
-
-}
+export interface ProxyServerOptions extends bs.Options {}
 
 export class ProxyServer {
     /* --- constants --- */
@@ -20,14 +18,14 @@ export class ProxyServer {
      *
      * @returns {ProxyServer}
      */
-    constructor(options?: ProxyServerOptions) {
+    public constructor(options?: ProxyServerOptions) {
         const defaults: ProxyServerOptions = {
             open: false,
             ui: false,
             logLevel: 'silent'
         }
 
-        this.options = Object.assign(defaults, options)
+        this.options = { ...defaults, ...options }
         this.browserSync = bs.create()
     }
 
@@ -50,9 +48,10 @@ export class ProxyServer {
         }
 
         // start server
-        this.browserSync.init(Object.assign(this.options, {
+        this.browserSync.init({
+            ...this.options,
             port: port,
             proxy: url
-        }))
+        })
     }
 }
