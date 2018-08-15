@@ -1,15 +1,13 @@
-import * as bs from 'browser-sync';
-export interface ProxyServerOptions extends bs.Options {
-}
+import { BrowserSyncInstance, Options } from 'browser-sync';
 export declare class ProxyServer {
     private options;
-    private browserSync;
+    private instance;
     /**
      * Initializes the ProxyServer.
      *
-     * @returns {ProxyServer}
+     * @param {Options} options
      */
-    constructor(options?: ProxyServerOptions);
+    constructor(options?: Options);
     /**
      * Starts listening on a given port.
      *
@@ -17,5 +15,5 @@ export declare class ProxyServer {
      * @param {number} port - An optional port.
      * @returns {void}
      */
-    listen(url: string, port?: number): void;
+    listen(url: string, port?: number): Promise<BrowserSyncInstance>;
 }
