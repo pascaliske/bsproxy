@@ -9,6 +9,10 @@
         "editor.formatOnType": true,
         "tslint.autoFixOnSave": true,
         "typescript.tsdk": "pascal-iske/node_modules/typescript/lib",
+        "[yaml]": {
+            "editor.formatOnSave": false,
+            "editor.formatOnType": false
+        },
         "[json]": {
             "editor.formatOnSave": false,
             "editor.formatOnType": false
