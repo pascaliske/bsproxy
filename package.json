@@ -1,13 +1,13 @@
 {
   "name": "@pascaliske/bsproxy",
   "description": "Command line utility for quickly proxying of a given url.",
+  "version": "2.1.1",
+  "license": "MIT",
   "author": {
     "name": "Pascal Iske",
     "email": "info@pascal-iske.de",
     "url": "https://pascal-iske.de"
   },
-  "license": "MIT",
-  "version": "2.1.1",
   "repository": {
     "url": "https://github.com/pascaliske/bsproxy.git",
     "type": "git"
@@ -16,12 +16,13 @@
     "url": "https://github.com/pascaliske/bsproxy/issues"
   },
   "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
+  "types": "typings/index.d.ts",
   "bin": {
     "bsproxy": "dist/cli.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rm -rf dist/ typings/ && tsc",
     "watch": "yarn run build --watch",
@@ -35,18 +36,18 @@
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
-    "browser-sync": "^2.23.5",
+    "browser-sync": "^2.24.6",
     "modern-cli": "^2.0.7",
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "@types/browser-sync": "^0.0.38",
-    "@types/node": "^10.0.3",
-    "ava": "^0.24.0",
-    "prettier": "^1.10.2",
-    "tslint": "^5.9.1",
-    "tslint-config-prettier": "^1.6.0",
-    "typedoc": "^0.10.0",
-    "typescript": "^2.6.2"
+    "@types/browser-sync": "^0.0.41",
+    "@types/node": "^10.7.0",
+    "ava": "^0.25.0",
+    "prettier": "^1.14.2",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.14.0",
+    "typedoc": "^0.11.1",
+    "typescript": "^3.0.1"
   }
 }

@@ -6,14 +6,17 @@
       "es2017.object",
       "dom"
     ],
-    "outDir": "./dist",
+    "outDir": "dist",
     "moduleResolution": "node",
+    "experimentalDecorators": true,
     "declaration": true,
     "declarationDir": "./typings",
-    "experimentalDecorators": true
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "include": [
-    "./typings.d.ts",
-    "./src/**/*.ts"
+    "typings.d.ts",
+    "src/**/*.ts"
   ]
 }

@@ -1,8 +1,6 @@
 # files
 .idea
 .DS_Store
-*.sublime-*
-*.code-*
 *.log
 
 # folders

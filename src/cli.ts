@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-import * as pkg from '../package.json'
 import { Logger, Arguments } from 'modern-cli'
 import { parse } from 'url'
 import { ProxyServer } from './lib/proxyserver'
+import * as pkg from '../package.json'
 
 // fetch package data
-const { name, version } = (<any>pkg)
+const { name, version } = pkg as any
 
 // enable logging
 process.env.DEBUG = name

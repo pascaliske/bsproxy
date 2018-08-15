@@ -1,32 +1,30 @@
-import * as bs from 'browser-sync'
-
-export interface ProxyServerOptions extends bs.Options {}
+import { BrowserSyncInstance, Options, create } from 'browser-sync'
 
 export class ProxyServer {
     /* --- constants --- */
 
     /* --- properties --- */
 
-    private options: ProxyServerOptions
+    private options: Options
 
-    private browserSync: bs.BrowserSyncInstance
+    private instance: BrowserSyncInstance
 
     /* --- constructor --- */
 
     /**
      * Initializes the ProxyServer.
      *
-     * @returns {ProxyServer}
+     * @param {Options} options
      */
-    public constructor(options?: ProxyServerOptions) {
-        const defaults: ProxyServerOptions = {
-            open: false,
+    public constructor(options?: Options) {
+        const defaults: Options = {
             ui: false,
+            open: false,
             logLevel: 'silent'
         }
 
         this.options = { ...defaults, ...options }
-        this.browserSync = bs.create()
+        this.instance = create()
     }
 
     /* --- private --- */
@@ -42,16 +40,25 @@ export class ProxyServer {
      * @param {number} port - An optional port.
      * @returns {void}
      */
-    public listen(url: string, port: number = 9001): void {
+    public listen(url: string, port: number = 9001): Promise<BrowserSyncInstance> {
         if (!url || url.match(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/) === null) {
             throw new Error('Please enter a valid url to proxy!')
         }
 
         // start server
-        this.browserSync.init({
-            ...this.options,
-            port: port,
-            proxy: url
+        return new Promise((resolve, reject) => {
+            const options = {
+                ...this.options,
+                port: port,
+                proxy: url
+            }
+
+            this.instance.init(options, error => {
+                if (error) {
+                    reject(error)
+                }
+                resolve(this.instance)
+            })
         })
     }
 }
