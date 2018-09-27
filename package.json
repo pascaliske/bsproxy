@@ -41,7 +41,7 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "@types/browser-sync": "^0.0.41",
+    "@types/browser-sync": "^0.0.42",
     "@types/node": "^10.7.0",
     "ava": "^0.25.0",
     "prettier": "^1.14.2",
