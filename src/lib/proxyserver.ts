@@ -1,15 +1,9 @@
 import { BrowserSyncInstance, Options, create } from 'browser-sync'
 
 export class ProxyServer {
-    /* --- constants --- */
-
-    /* --- properties --- */
-
     private options: Options
 
     private instance: BrowserSyncInstance
-
-    /* --- constructor --- */
 
     /**
      * Initializes the ProxyServer.
@@ -27,18 +21,12 @@ export class ProxyServer {
         this.instance = create()
     }
 
-    /* --- private --- */
-
-    /* --- protected --- */
-
-    /* --- public --- */
-
     /**
      * Starts listening on a given port.
      *
      * @param {string} url - The url to proxy.
      * @param {number} port - An optional port.
-     * @returns {void}
+     * @returns {Promise<BrowserSyncInstance>}
      */
     public listen(url: string, port: number = 9001): Promise<BrowserSyncInstance> {
         if (!url || url.match(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/) === null) {

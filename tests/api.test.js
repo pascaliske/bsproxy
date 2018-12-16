@@ -15,7 +15,7 @@ test('import has constructor function', t => {
     t.is(value, expected)
 })
 
-test('import can be instanciated with constructor', t => {
+test('import can be instantiated with constructor', t => {
     const instance = new ProxyServer()
 
     const value1 = typeof instance
@@ -29,7 +29,7 @@ test('import can be instanciated with constructor', t => {
     t.is(value2, expected2)
 })
 
-test('instanciated object has listen function', t => {
+test('instantiated object has listen function', t => {
     const instance = new ProxyServer()
 
     const value = typeof instance.listen

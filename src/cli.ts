@@ -1,35 +1,33 @@
 #!/usr/bin/env node
 
-import { Logger, Arguments } from 'modern-cli'
+import * as debug from 'debug'
+import chalk from 'chalk'
 import { parse } from 'url'
 import { ProxyServer } from './lib/proxyserver'
-import * as pkg from '../package.json'
 
-// fetch package data
-const { name, version } = pkg as any
+// tslint:disable-next-line
+const { name, version } = require('../package.json')
 
 // enable logging
-process.env.DEBUG = name
+debug.enable(name)
 
-const log: Logger = new Logger(name)
-const args: Arguments = new Arguments()
-const url: string = args.get(0) || false
-const port: number = args.get(1) || 9001
+const log = debug(name)
+const url: string = process.argv[2] || ''
+const port: number = parseInt(process.argv[3], 10) || 9001
 
 // log version
 log(`v${version}`)
 
 // check given url
-if (!url) {
-    log.red('Please enter a url to proxy!')
+if (url.length === 0) {
+    log(chalk.red('Please enter a url to proxy!'))
     process.exit(1)
 }
 
 // log
 const proxyUrl: string = `${parse(url, false, true).protocol}//localhost:${port}`
-log(`proxy started: ${Logger.cyan(proxyUrl)} -> ${Logger.cyan(url)}`)
+log(`proxy started: ${chalk.cyan(proxyUrl)} -> ${chalk.cyan(url)}`)
 
 // create proxy server
-const options = {}
-const server = new ProxyServer(options)
+const server = new ProxyServer()
 server.listen(url, port)

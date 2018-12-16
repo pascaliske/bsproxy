@@ -1,7 +1,7 @@
 {
   "name": "@pascaliske/bsproxy",
   "description": "Command line utility for quickly proxying of a given url.",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "license": "MIT",
   "author": {
     "name": "Pascal Iske",
@@ -24,30 +24,32 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist/ typings/ && tsc",
+    "build": "rm -rf dist/ typings/ && tsc --project tsconfig.json",
     "watch": "yarn run build --watch",
     "docs": "rm -rf docs/ && typedoc --target es5 --mode file --module commonjs --ignoreCompilerErrors --excludePrivate --out docs/ src/*.ts",
     "test": "ava tests/*.js",
     "lint": "tslint --config tslint.json --fix src/**/*.ts",
-    "format": "prettier --config .prettierrc --write src/**/*.ts"
+    "format": "prettier --config .prettierrc --write \"{src,tests}/**/*.{ts,js}\""
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0",
-    "browser-sync": "^2.24.6",
-    "modern-cli": "^2.0.7",
+    "browser-sync": "^2.26.3",
+    "chalk": "^2.4.1",
+    "debug": "^4.1.0",
+    "tslib": "^1.9.3",
     "url": "^0.11.0"
   },
   "devDependencies": {
     "@types/browser-sync": "^0.0.42",
-    "@types/node": "^10.7.0",
+    "@types/debug": "^0.0.31",
+    "@types/node": "^10.12.15",
     "ava": "^1.0.1",
-    "prettier": "^1.14.2",
+    "prettier": "^1.15.3",
     "tslint": "^5.11.0",
-    "tslint-config-prettier": "^1.14.0",
+    "tslint-config-prettier": "^1.17.0",
     "typedoc": "^0.13.0",
-    "typescript": "^3.0.1"
+    "typescript": "^3.2.2"
   }
 }
