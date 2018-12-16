@@ -35,13 +35,15 @@
     "access": "public"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0",
     "browser-sync": "^2.26.3",
-    "modern-cli": "^2.0.7",
+    "chalk": "^2.4.1",
+    "debug": "^4.1.0",
+    "tslib": "^1.9.3",
     "url": "^0.11.0"
   },
   "devDependencies": {
     "@types/browser-sync": "^0.0.42",
+    "@types/debug": "^0.0.31",
     "@types/node": "^10.12.15",
     "ava": "^1.0.1",
     "prettier": "^1.15.3",
