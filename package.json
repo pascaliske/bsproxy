@@ -24,12 +24,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist/ typings/ && tsc",
+    "build": "rm -rf dist/ typings/ && tsc --project tsconfig.json",
     "watch": "yarn run build --watch",
     "docs": "rm -rf docs/ && typedoc --target es5 --mode file --module commonjs --ignoreCompilerErrors --excludePrivate --out docs/ src/*.ts",
     "test": "ava tests/*.js",
     "lint": "tslint --config tslint.json --fix src/**/*.ts",
-    "format": "prettier --config .prettierrc --write src/**/*.ts"
+    "format": "prettier --config .prettierrc --write \"{src,tests}/**/*.{ts,js}\""
   },
   "publishConfig": {
     "access": "public"
