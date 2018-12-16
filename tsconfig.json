@@ -9,6 +9,8 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "declaration": true,
     "declarationDir": "./typings",
     "typeRoots": [
@@ -16,7 +18,6 @@
     ]
   },
   "include": [
-    "typings.d.ts",
     "src/**/*.ts"
   ]
 }

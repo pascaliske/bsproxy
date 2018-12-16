@@ -80,7 +80,6 @@
       true,
       "allow-destructuring"
     ],
-    "no-unused-variable": true,
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "no-var-requires": true,
