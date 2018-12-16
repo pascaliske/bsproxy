@@ -13,7 +13,7 @@ export declare class ProxyServer {
      *
      * @param {string} url - The url to proxy.
      * @param {number} port - An optional port.
-     * @returns {void}
+     * @returns {Promise<BrowserSyncInstance>}
      */
     listen(url: string, port?: number): Promise<BrowserSyncInstance>;
 }

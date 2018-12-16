@@ -5,7 +5,7 @@ import { parse } from 'url'
 import { ProxyServer } from './lib/proxyserver'
 
 // tslint:disable-next-line
-const pkg = require('../package.json')
+const { name, version } = require('../package.json')
 
 // enable logging
 process.env.DEBUG = pkg.name
@@ -16,7 +16,7 @@ const url: string = args.get(0) || false
 const port: number = args.get(1) || 9001
 
 // log version
-log(`v${pkg.version}`)
+log(`v${version}`)
 
 // check given url
 if (!url) {
@@ -29,6 +29,5 @@ const proxyUrl: string = `${parse(url, false, true).protocol}//localhost:${port}
 log(`proxy started: ${Logger.cyan(proxyUrl)} -> ${Logger.cyan(url)}`)
 
 // create proxy server
-const options = {}
-const server = new ProxyServer(options)
+const server = new ProxyServer()
 server.listen(url, port)
