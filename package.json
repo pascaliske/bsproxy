@@ -42,7 +42,7 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "@types/browser-sync": "^0.0.43",
+    "@types/browser-sync": "^2.26.0",
     "@types/debug": "^4.1.0",
     "@types/node": "^12.0.0",
     "ava": "^1.0.1",
