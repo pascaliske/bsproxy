@@ -1,17 +1,13 @@
 language: node_js
 node_js:
+  - '12'
   - '11'
-  - '10'
-  - '8'
-before_install: yarn global add greenkeeper-lockfile@1
 install:
   - yarn install
-before_script: greenkeeper-lockfile-update
 script:
   - yarn run build
   - yarn run test
   - yarn run lint
-after_script: greenkeeper-lockfile-upload
 deploy:
   provider: npm
   email: info@pascal-iske.de
@@ -21,7 +17,7 @@ deploy:
   on:
     tags: true
     branch: master
-    node: 10
+    node: 12
 env:
   global:
     secure: hn1pBPYFGn/08O5y5XX7jQuFErK48CPE19d6KpH3dHzIRco5KEFG2qGzpLwFZsPeXwvMYd+Pf27H8eXXpVn9AHNbMVPnkTCZCbvOBbRcGo/bnv/PW7xbsKRKANi0h6k8EkGJO9BtlH2OTeJZLGsW/FEm9zrqyrBoZDLB2ki2h+Q9uRwP0SqP0pROevB8OqsBwcmxuNtZ9033WEaMhHUr4Vj6sd4lKJD+8GNrRgGqVnNpRYk80jdd0fqPxhbp94I9Mh+EsxPTVZz0wZU/o61jouIoWPP1mokfrBakEnNEoNGF/Axk85f3Y02NQmGMyk7tMQCYQsG/pIy05LTM5U3+Kh29x8u6cfG89b32pERiU3L8cTAO7HhXijfJGp+DoqDFazBBJzmjq9QO/xmcGxNgtIxuo2oXZ7x7gE04jN9UOtQBv8qZNBS6yYWljrohTUMPHyqdqH94Qqv7YJPCE/ToAEDwMD8UonEYOHB+j0oY8tm3A0YEZQwvQruUur1yKSry8ZsmcpVimXqkkoAP8j6ooAnB6pRYZGSP54IeStlDbG88MfWFky2yxjPULu2c44qhXPlBJ/JMYKQLXUSwgsQcCenZb4w3tZbLINSVQb8PstT8OH/krt09sGBEXT7Yhs2d9X1I4k5tH4gQPmKkT31hIw7CGn/yNsTJ27Qi8Jr++LY=
