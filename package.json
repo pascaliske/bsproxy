@@ -1,7 +1,7 @@
 {
   "name": "@pascaliske/bsproxy",
   "description": "Command line utility for quickly proxying of a given url.",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "license": "MIT",
   "author": {
     "name": "Pascal Iske",
