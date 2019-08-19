@@ -381,10 +381,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@types/browser-sync@^2.26.0":
-  version "2.26.0"
-  resolved "https://registry.yarnpkg.com/@types/browser-sync/-/browser-sync-2.26.0.tgz#969f3e54025f1f530001507c6ccc20e411fc6542"
-  integrity sha512-OCU71vMympGkON3mmqlURRXGVfM0gEcf5Ij0dYpekpBqPInx/PnCtLSvyTvT4oazmEoSBLHYvGgIgIWXK2+dQQ==
+"@types/browser-sync@^2.26.1":
+  version "2.26.1"
+  resolved "https://registry.yarnpkg.com/@types/browser-sync/-/browser-sync-2.26.1.tgz#260a68269ff2facbe8bdd16e3421c44bac39b704"
+  integrity sha512-zuz0uF2QccSVbG4ubkjVDlQYpeBX/JXvmlqFFmp04FYOXunXZtx0y+UdWJxu7uryMMGkQykujUMm/ju85kqI7Q==
   dependencies:
     "@types/micromatch" "^2"
     "@types/node" "*"
