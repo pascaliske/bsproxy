@@ -35,7 +35,7 @@
     "access": "public"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.12",
     "chalk": "^4.0.0",
     "debug": "^4.1.0",
     "tslib": "^1.12.0",
